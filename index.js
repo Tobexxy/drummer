@@ -1,7 +1,10 @@
 //document.querySelectorAll("button")[3].addEventListener("click", handleClick);
-// document.querySelector("h1").addEventListener("click", function (){
-//     console.log(this);
-// })
+
+// adding an event listener for keybord presses
+document.addEventListener("keypress", function (){
+    alert("Who press me")
+    console.log(this);
+})
 
 
 // you can use the event listener function in to different ways the top or the button one
@@ -63,3 +66,7 @@ function handleClick() {
 }
 
 //audio.play();
+// event clicker
+$0.addEventListener("keypress", function (event) {
+    console.log(event);
+});
