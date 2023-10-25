@@ -1,5 +1,7 @@
 //document.querySelectorAll("button")[3].addEventListener("click", handleClick);
-
+// document.querySelector("h1").addEventListener("click", function (){
+//     console.log(this);
+// })
 
 
 // you can use the event listener function in to different ways the top or the button one
@@ -15,7 +17,7 @@ for (var i = 0; i<buttonnuber; i++){
 
 function handleClick() {
     var buttonInnerHTML = this.innerHTML
-
+    console.log(this.innerHTML);
     switch (buttonInnerHTML) {
         case "w":
             var audio = new Audio("/sounds/crash.mp3");
