@@ -18,6 +18,10 @@ function handleClick() {
     var buttonInnerHTML = this.innerHTML
 
         makeSound(buttonInnerHTML);
+
+        buttonAnimation(buttonInnerHTML);
+
+        buttonColor(buttonInnerHTML);
 }
 
 // this code after listening to the clicks it plays sound associated to it
@@ -76,7 +80,10 @@ function handleClick() {
 
 // adding an event listener for keybord presses
 document.addEventListener("keypress", function (event){
+    console.log(event);
     makeSound(event.key);
+    buttonAnimation(event.key);
+    buttonColor(event.key);
 });
 
 
@@ -127,3 +134,23 @@ function makeSound(key){
 
 }
 
+function buttonAnimation(currentKey) {
+    var activeButton = document.querySelector("." + currentKey);
+    activeButton.classList.add("pressed");
+   
+
+    setTimeout (function(){
+        activeButton.classList.remove("pressed");    
+    
+    }, 100);
+}
+
+function buttonColor (keyColor){
+    var keyChange = document.querySelector("." + keyColor);
+    keyChange.style.color = "yellow";
+
+    setTimeout (function(){
+        keyChange.style.color = "#DA0463";    
+    
+    }, 200);
+} 
